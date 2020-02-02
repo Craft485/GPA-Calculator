@@ -29,16 +29,16 @@ var getClassLevel = _=> {
     for (e = 0; e < classLevelElementIdArr.length; e++) {
         //get an array of the class name
         let classArr = document.getElementsByClassName("expandable-row")[classLevelElementIdArr[e]].innerHTML.split(" ")/*typeof should be arr*/
-            //sift the array for the keywords "AP" and "Honors"
-            var ap = classArr.find(Element => Element === "AP")
-            var honors = classArr.find(Element => Element === "HONORS")
-            if(ap === "AP") {
-                classLevels.push("AP")
-            } else if (honors === "HONORS") {
-                classLevels.push("HONORS")
-            } else {
-                classLevels.push("CP")
-            }
+        //sift the array for the keywords "AP" and "Honors"
+        var ap = classArr.find(Element => Element === "AP")
+        var honors = classArr.find(Element => Element === "HONORS")
+        if(ap === "AP") {
+            classLevels.push("AP")
+        } else if (honors === "HONORS") {
+            classLevels.push("HONORS")
+        } else {
+            classLevels.push("CP")
+        }
     }
     if (gradeArr.length === classLevels.length) {
         calcAdditiveGpa()
@@ -48,7 +48,8 @@ var getClassLevel = _=> {
 var calcAdditiveGpa = _=> {
     let additiveGPA = 0
     for (a = 0; a < gradeArr.length; a++) {
-        let gradePercent = gradeArr[a]
+        let gradePercent = Math.round(gradeArr[a])
+        console.log(gradePercent)
         let classLvl = classLevels[a]
 
         if (92 <= gradePercent <= 100) { //4.0+
@@ -95,7 +96,7 @@ var calcAdditiveGpa = _=> {
             if (classLvl === "AP") {
                 additiveGPA += 2.64
             } else if (classLvl === "HONORS") {
-                additiveGPA += 2.4
+                additiveGPA += 2.42
             } else if (classLvl === "CP") {
                 additiveGPA +=2.2
             }
@@ -144,6 +145,8 @@ var calcAdditiveGpa = _=> {
         }
         //console.log(a)
     }
-    console.log(additiveGPA/gradeArr.length)
+    console.log("Additive GPA: " + additiveGPA)
+    console.log("Number of classes taken: " + gradeArr.length)
+    console.log("Final GPA: " + additiveGPA/gradeArr.length)
     return
 }
