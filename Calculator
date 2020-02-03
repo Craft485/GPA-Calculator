@@ -52,7 +52,7 @@ var calcAdditiveGpa = _=> {
         console.log(gradePercent)
         let classLvl = classLevels[a]
 
-        if (92 <= gradePercent <= 100) { //4.0+
+        if (92 <= gradePercent && gradePercent <= 100) { //4.0+
             if (classLvl === "AP") {
                 additiveGPA += 4.8
             } else if (classLvl === "HONORS") {
@@ -60,7 +60,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 4
             }
-        } else if (90 <= gradePercent <= 91) { //3.8-4.56
+        } else if (90 <= gradePercent && gradePercent <= 91) { //3.8-4.56
             if (classLvl === "AP") {
                 additiveGPA += 4.56
             } else if (classLvl === "HONORS") {
@@ -68,7 +68,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 3.8
             }
-        } else if (88 <= gradePercent <= 89) { //3.2-3.84
+        } else if (88 <= gradePercent && gradePercent <= 89) { //3.2-3.84
             if (classLvl === "AP") {
                 additiveGPA += 3.84
             } else if (classLvl === "HONORS") {
@@ -76,7 +76,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 3.2
             }
-        } else if (82 <= gradePercent <= 87) { //3-3.6
+        } else if (82 <= gradePercent && gradePercent <= 87) { //3-3.6
             if (classLvl === "AP") {
                 additiveGPA += 3.6
             } else if (classLvl === "HONORS") {
@@ -84,7 +84,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 3
             }
-        } else if (80 <= gradePercent <= 81) { //2.8-3.36
+        } else if (80 <= gradePercent && gradePercent <= 81) { //2.8-3.36
             if (classLvl === "AP") {
                 additiveGPA += 3.36
             } else if (classLvl === "HONORS") {
@@ -92,7 +92,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 2.8
             }
-        } else if (78 <= gradePercent <= 79) { //2.2-2.64
+        } else if (78 <= gradePercent && gradePercent <= 79) { //2.2-2.64
             if (classLvl === "AP") {
                 additiveGPA += 2.64
             } else if (classLvl === "HONORS") {
@@ -100,7 +100,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA +=2.2
             }
-        } else if (72 <= gradePercent <= 77) { //2-2.4
+        } else if (72 <= gradePercent && gradePercent <= 77) { //2-2.4
             if (classLvl === "AP") {
                 additiveGPA += 2.4
             } else if (classLvl === "HONORS") {
@@ -108,7 +108,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 2
             }
-        } else if (70 <= gradePercent <= 71) { //1.8-2.16
+        } else if (70 <= gradePercent && gradePercent <= 71) { //1.8-2.16
             if (classLvl === "AP") {
                 additiveGPA += 2.16
             } else if (classLvl === "HONORS") {
@@ -116,7 +116,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 1.8
             }
-        } else if (68 <= gradePercent <= 69) { //1.2-1.44
+        } else if (68 <= gradePercent && gradePercent <= 69) { //1.2-1.44
             if (classLvl === "AP") {
                 additiveGPA += 1.44
             } else if (classLvl === "HONORS") {
@@ -124,7 +124,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 1.2
             }
-        } else if (62 <= gradePercent <= 67) { //1-1.2
+        } else if (62 <= gradePercent && gradePercent <= 67) { //1-1.2
             if (classLvl === "AP") {
                 additiveGPA += 1.2
             } else if (classLvl === "HONORS") {
@@ -132,7 +132,7 @@ var calcAdditiveGpa = _=> {
             } else if (classLvl === "CP") {
                 additiveGPA += 1
             }
-        } else if (60 <= gradePercent <= 61) { //0.8-0.96
+        } else if (60 <= gradePercent && gradePercent <= 61) { //0.8-0.96
             if (classLvl === "AP") {
                 additiveGPA += 0.96
             } else if (classLvl === "HONORS") {
