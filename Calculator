@@ -150,3 +150,4 @@ var calcAdditiveGpa = _=> {
     console.log("Final GPA: " + additiveGPA/gradeArr.length)
     return
 }
+start()
