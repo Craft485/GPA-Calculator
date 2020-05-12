@@ -3,8 +3,8 @@
     console.warn(`If you notice elements on the page being removed, this is supposed to happen. \n 
     The scripts is putting the page in a state where it can more easily "scan" or "read" the pages contents prior calculating your GPA`)
     globalThis.additiveGPA = 0
-    globalThis.gradeArr = []
-    globalThis.classLevels = []
+    globalThis.gradeArr = new Array
+    globalThis.classLevels = new Array
     document.getElementsByTagName("table")[3].rows[0].remove()
     !function findGrades () {
         // Loop through an push every grade number (unrounded)
@@ -21,7 +21,9 @@
     }()
     // Loop through each class, fetch each classes level (Ap, Honors or cp)
     function getClassLevels () {
-        for (i = 0; i < document.getElementsByTagName("table")[3].rows.length; i++) {
+        // +1 is to accommodate for lunch period
+        // because we need graded in that apparently 
+        for (i = 0; i < gradeArr.length+1; i++) {
             let a = document.getElementsByTagName("table")[3].rows[i].cells[1].innerText.split(' ')
             let honors = a.find(e=>e==="HONORS")
             let ap = a.find(e=>e==="AP")
@@ -32,9 +34,9 @@
                 classLevels.push("HONORS")
             } else if (!ap && !honors && !isLunch) {
                 classLevels.push("CP") //CP or regular, both(I think) are weighted the same
-            } else if (isLunch) {
-                document.getElementsByTagName("table")[3].rows[i].remove()
             }
+            console.log(a)
+            console.log(i)
         }
         console.log("Found class levels: \n"+classLevels)
         // calc()
