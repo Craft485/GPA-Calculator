@@ -9,9 +9,9 @@
     !function findGrades () {
         // Loop through an push every grade number (unrounded)
         for (i = 0; i < document.getElementsByTagName("table")[3].rows.length; i++) {
-            // For some reason JS will use math operations on empty strings, so I can't rounch the fetched
+            // For some reason JS will use math operations on empty strings, so I can't round the fetched
             // element in the same line as the element was fetched because of course not
-            // why would do that, its not like that would be a perfectly reasonable thing to be able to do
+            // why would anyone do that, its not like that would be a perfectly reasonable thing to be able to do
             // but here we are
             let v = document.getElementsByTagName("table")[3].rows[i].cells[3].innerText.split(' ')[0]
             if (v !== "") gradeArr.push(Math.round(v))
