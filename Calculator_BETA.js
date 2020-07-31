@@ -4,7 +4,7 @@
     The scripts is putting the page in a state where it can more easily "scan" or "read" the pages contents prior calculating your GPA`)
     globalThis.additiveGPA = 0
     globalThis.gradeArr = new Array
-    globalThis.classLevels = new Array
+    globalThis.classLevels = new Array 
     document.getElementsByTagName("table")[3].rows[0].remove()
     !function findGrades () {
         // Loop through an push every grade number (unrounded)
