@@ -52,7 +52,7 @@ var calcAdditiveGpa = _=> {
         console.log(gradePercent)
         let classLvl = classLevels[a]
 
-        if (92 <= gradePercent && gradePercent <= 100) { //4.0+
+        if (92 <= gradePercent) { //4.0+
             if (classLvl === "AP") {
                 additiveGPA += 4.8
             } else if (classLvl === "HONORS") {
