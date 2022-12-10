@@ -8,11 +8,11 @@
         if (parser) grades.push([parser[1] || parser[2] || null, parser[3]])
     }
 
-    const ccpCount = window.prompt('Enter the number of CCP classes you are taking')
+    const ccpCount = prompt('Enter the number of CCP classes you are taking')
 
     for (let i = 0; i < parseInt(ccpCount); i++) {
         // Not yet handling bad input data
-        const grade = window.prompt(`What is your grade in CCP class ${i + 1}? (Enter a decimal value)`)
+        const grade = prompt(`What is your grade in CCP class ${i + 1}? (Enter a decimal value)`)
         grades.push(['AP', parseFloat(grade)])
     }
 
@@ -112,7 +112,5 @@
             additiveGPA += 0
         }
     }
-    console.log(`Additive GPA: ${additiveGPA}`)
-    console.log(`Number of classes taken: ${grades.length}`)
-    console.log(`Final GPA: ${additiveGPA/grades.length}`)
+    alert(`Additive GPA: ${additiveGPA}\nNumber of classes taken: ${grades.length}\nFinal GPA: ${additiveGPA/grades.length}`)
 }()
