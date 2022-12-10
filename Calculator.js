@@ -108,7 +108,7 @@
             } else {
                 additiveGPA += 0.8
             }
-        } else if (gradePercent <= 59) {// F
+        } else if (gradePercent <= 59) { // F
             additiveGPA += 0
         }
     }
